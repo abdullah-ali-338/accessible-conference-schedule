@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference Schedule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TechCon 2026 Schedule</h1>
+    <nav aria-label="Days">
+      <div role="tablist">
+        <button role="tab" id="tab-day1" aria-selected="true" aria-controls="day1" tabindex="0">Day 1</button>
+        <button role="tab" id="tab-day2" aria-selected="false" aria-controls="day2" tabindex="-1">Day 2</button>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section id="day1" role="tabpanel" aria-labelledby="tab-day1">
+      <h2>Day 1 Sessions</h2>
+      <div class="schedule-grid">
+        <article class="session-card">
+          <span class="track-badge">Track 1</span>
+          <time datetime="09:00">09:00 AM</time>
+          <h3>Keynote: Future of Web Standards</h3>
+          <button class="details-btn" data-title="Keynote: Future of Web Standards" data-time="09:00 AM - 10:00 AM" data-track="Track 1" data-desc="Deep dive into modern accessibility specs and next-gen layouts.">View Details</button>
+        </article>
+
+        <article class="session-card">
+          <span class="track-badge">Track 2</span>
+          <time datetime="09:00">09:00 AM</time>
+          <h3>Building Resilient APIs</h3>
+          <button class="details-btn" data-title="Building Resilient APIs" data-time="09:00 AM - 10:00 AM" data-track="Track 2" data-desc="Handling partial failures and rate limiting under heavy load.">View Details</button>
+        </article>
+
+        <article class="session-card">
+          <span class="track-badge">Track 3</span>
+          <time datetime="09:00">09:00 AM</time>
+          <h3>Micro-Frontends in Production</h3>
+          <button class="details-btn" data-title="Micro-Frontends in Production" data-time="09:00 AM - 10:00 AM" data-track="Track 3" data-desc="Managing federated codebases without breaking team workflows.">View Details</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="day2" role="tabpanel" aria-labelledby="tab-day2" hidden>
+      <h2>Day 2 Sessions</h2>
+      <div class="schedule-grid">
+        <article class="session-card">
+          <span class="track-badge">Track 1</span>
+          <time datetime="10:00">10:00 AM</time>
+          <h3>Accessible Component Design</h3>
+          <button class="details-btn" data-title="Accessible Component Design" data-time="10:00 AM - 11:00 AM" data-track="Track 1" data-desc="Practical keyboard focus management and screen reader patterns.">View Details</button>
+        </article>
+
+        <article class="session-card">
+          <span class="track-badge">Track 2</span>
+          <time datetime="10:00">10:00 AM</time>
+          <h3>Database Indexing Strategies</h3>
+          <button class="details-btn" data-title="Database Indexing Strategies" data-time="10:00 AM - 11:00 AM" data-track="Track 2" data-desc="Optimizing high-read relational schemas at scale.">View Details</button>
+        </article>
+
+        <article class="session-card">
+          <span class="track-badge">Track 3</span>
+          <time datetime="10:00">10:00 AM</time>
+          <h3>CI/CD Pipeline Automation</h3>
+          <button class="details-btn" data-title="CI/CD Pipeline Automation" data-time="10:00 AM - 11:00 AM" data-track="Track 3" data-desc="Automating deployment rollbacks and integration test gates.">View Details</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="session-dialog" aria-labelledby="dialog-title" aria-modal="true">
+    <div class="dialog-content">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-meta"></p>
+      <p id="dialog-desc"></p>
+      <button id="close-dialog" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
